@@ -8,15 +8,12 @@ import { useTheme } from 'app/providers/ThemeProvider';
 import { Navbar } from 'widgets/Navbar';
 
 const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
-    <div
-      className={classNames('app', { hovered: true, selected: false }, [theme])}
-    >
+    <div className={classNames('app', {}, [theme])}>
       <Navbar />
       <AppRouter />
-      <button onClick={toggleTheme}>TOGGLE</button>
     </div>
   );
 };
