@@ -10,5 +10,7 @@
   "about": "About",
   "toggle": "Toggle",
   "short-lang": "En",
-  "Login": "Login"
+  "Login": "Login",
+  "Increment": "Increment",
+  "Decrement": "Decrement"
 }

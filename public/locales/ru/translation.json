@@ -8,5 +8,7 @@
   "refresh-page": "Обновить страницу",
   "throw-error": "Вызвать ошибку",
   "short-lang": "Ru",
-  "Login": "Войти"
+  "Login": "Войти",
+  "Increment": "Увеличить",
+  "Decrement": "Уменьшить"
 }
