@@ -1,4 +1,3 @@
-import { useTheme } from 'app/providers/ThemeProvider';
 import React, {
     ReactNode, useEffect, useRef, useState, useCallback,
 } from 'react';
@@ -11,18 +10,25 @@ interface ModalProps {
     children?: ReactNode;
     isOpen?: boolean;
     onClose?: () => void;
+    lazy?: boolean
 }
 
 const ANIMATION_DELAY = 300;
 
 export const Modal = (props: ModalProps) => {
     const {
-        className, children, isOpen, onClose,
+        className, children, isOpen, onClose, lazy = true,
     } = props;
 
     const [isClosing, setIsClosing] = useState(false);
+    const [isMounted, setMounted] = useState(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
-    const { theme } = useTheme();
+
+    useEffect(() => {
+        if (isOpen) {
+            setMounted(true);
+        }
+    }, [isOpen]);
 
     const onContetntClick = (e: React.MouseEvent) => {
         e.stopPropagation();
@@ -58,6 +64,9 @@ export const Modal = (props: ModalProps) => {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     };
+    if (lazy && !isMounted) {
+        return null;
+    }
     return (
         <Portal>
             <div className={classNames(cls.Modal, mods, [className])}>
