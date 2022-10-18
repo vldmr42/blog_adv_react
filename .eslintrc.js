@@ -21,7 +21,7 @@ module.exports = {
         'react-hooks',
     ],
     rules: {
-        'max-len': ['warn', { ignoreComments: true, code: 100 }],
+        'max-len': ['warn', { ignoreComments: true, code: 120 }],
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         indent: [2, 4],

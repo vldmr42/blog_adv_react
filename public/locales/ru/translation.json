@@ -13,5 +13,7 @@
   "Decrement": "Уменьшить",
   "Enter": "Войти",
   "Enter username": "Введите логин",
-  "Enter password": "Введите пароль"
+  "Enter password": "Введите пароль",
+  "Auth Form": "Форма Авторизации",
+  "You enter wrong login or password": "Вы ввели неверный логин или пароль"
 }

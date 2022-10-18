@@ -1,10 +1,13 @@
 {
+  "Auth Form": "",
   "Decrement": "Decrement",
   "Enter": "",
   "Enter password": "",
   "Enter username": "",
   "Increment": "Increment",
   "Login": "",
+  "Logout": "",
+  "You enter wrong login or password": "",
   "about": "about",
   "refresh-page": "refresh-page",
   "stranica-ne-naidena": "stranica-ne-naidena",

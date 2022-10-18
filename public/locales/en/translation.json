@@ -15,5 +15,7 @@
   "Decrement": "Decrement",
   "Enter": "Enter",
   "Enter username": "Enter username",
-  "Enter password": "Enter password"
+  "Enter password": "Enter password",
+  "Auth Form": "Auth Form",
+  "You enter wrong login or password": "You enter wrong login or password"
 }
