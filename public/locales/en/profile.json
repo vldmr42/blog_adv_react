@@ -1,4 +1,9 @@
 {
   "Profile": "Profile",
-  "Edit": "Edit"
+  "Edit": "Edit",
+  "Server error": "Server error",
+  "Age is incorrect": "Age is incorrect",
+  "Incorrect country": "Incorrect country",
+  "Firstname and Lastname are required": "Firstname and Lastname are required",
+  "No data has been provided": "No data has been provided"
 }
