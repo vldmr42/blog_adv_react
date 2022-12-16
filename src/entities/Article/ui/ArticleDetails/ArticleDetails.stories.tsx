@@ -14,7 +14,7 @@ export default {
 } as ComponentMeta<typeof ArticleDetails>;
 
 const Template: ComponentStory<typeof ArticleDetails> = (args) => (
-    <ArticleDetails {...(args as typeof ArticleDetails)} />);
+    <ArticleDetails {...(args as typeof ArticleDetails.arguments)} />);
 
 export const Light = Template.bind({});
 Light.args = {};

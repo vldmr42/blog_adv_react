@@ -1,6 +1,7 @@
 {
   "": "",
   "Age is incorrect": "Age is incorrect",
+  "Article not found": "Article not found",
   "Auth Form": "Auth Form",
   "Cancel": "Cancel",
   "Decrement": "Decrement",
@@ -8,6 +9,7 @@
   "Enter": "Enter",
   "Enter password": "Enter password",
   "Enter username": "Enter username",
+  "Error occured during loading": "Error occured during loading",
   "Error occured on profile loading": "Error occured on profile loading",
   "Euro": "Euro",
   "Firstname and Lastname are required": "Firstname and Lastname are required",

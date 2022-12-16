@@ -17,5 +17,4 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     );
 };
 
-// export default memo(ArticlesPage);
-export default ArticlesPage;
+export default memo(ArticlesPage);
