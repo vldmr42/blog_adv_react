@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from '../../../shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Themes } from '../../../app/providers/ThemeProvider';
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 
 export default {
     title: 'shared/Text',
@@ -43,4 +43,11 @@ Error.args = {
     title: 'Title',
     text: 'Really long description to see how text is going',
     theme: TextTheme.ERROR,
+};
+
+export const SizeL = Template.bind({});
+SizeL.args = {
+    title: 'Title',
+    text: 'Really long description to see how text is going',
+    size: TextSize.L,
 };

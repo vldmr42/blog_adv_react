@@ -14,7 +14,7 @@ export default {
 } as ComponentMeta<typeof ArticleTextBlockComponent>;
 
 const Template: ComponentStory<typeof ArticleTextBlockComponent> = (args) => (
-    <ArticleTextBlockComponent {...(args as typeof ArticleTextBlockComponent)} />);
+    <ArticleTextBlockComponent {...(args as typeof ArticleTextBlockComponent.arguments)} />);
 
 export const Light = Template.bind({});
 Light.args = {};

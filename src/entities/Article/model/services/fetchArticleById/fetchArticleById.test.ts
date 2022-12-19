@@ -1,11 +1,6 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Themes } from 'app/providers/ThemeProvider';
-import { Article, ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import ArticlesDetailsPage from './ArticlesDetailsPage';
+import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
+import { Article, ArticleBlockType, ArticleType } from '../../types/article';
+import { fetchArticleById } from './fetchArticleById';
 
 const article: Article = {
     id: '1',
@@ -77,28 +72,23 @@ const article: Article = {
     ],
 };
 
-export default {
-    title: 'pages/ArticlesDetailsPage',
-    component: ArticlesDetailsPage,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof ArticlesDetailsPage>;
+describe('fetchArticleById.test', () => {
+    test('succes', async () => {
+        const thunk = new TestAsyncThunk(fetchArticleById);
+        thunk.api.get.mockReturnValue(Promise.resolve({ data: article }));
+        const result = await thunk.callThunk('1');
 
-const Template: ComponentStory<typeof ArticlesDetailsPage> = (args) => (
-    <ArticlesDetailsPage {...(args as typeof ArticlesDetailsPage.arguments)} />);
+        expect(thunk.api.get).toHaveBeenCalled();
+        expect(result.meta.requestStatus).toBe('fulfilled');
+        expect(result.payload).toEqual(article);
+    });
 
-export const Light = Template.bind({});
-Light.decorators = [StoreDecorator({
-    articleDetails: {
-        data: article,
-    },
-})];
+    test('error', async () => {
+        const thunk = new TestAsyncThunk(fetchArticleById);
+        thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
+        const result = await thunk.callThunk('2');
 
-export const Dark = Template.bind({});
-Dark.args = {};
-Dark.decorators = [ThemeDecorator(Themes.DARK), StoreDecorator({
-    articleDetails: {
-        data: article,
-    },
-})];
+        // #TODO why fulfilled and not rejected???
+        expect(result.meta.requestStatus).toBe('fulfilled');
+    });
+});
