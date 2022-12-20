@@ -3,18 +3,18 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Themes } from 'app/providers/ThemeProvider';
-import { ArticleImageBlockComponent } from './ArticleImageBlockComponent';
+import { CommentList } from './CommentList';
 
 export default {
-    title: 'entities/ArticleImageBlockComponent',
-    component: ArticleImageBlockComponent,
+    title: 'entities/CommentList',
+    component: CommentList,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof ArticleImageBlockComponent>;
+} as ComponentMeta<typeof CommentList>;
 
-const Template: ComponentStory<typeof ArticleImageBlockComponent> = (args) => (
-    <ArticleImageBlockComponent {...(args as typeof ArticleImageBlockComponent.arguments)} />);
+const Template: ComponentStory<typeof CommentList> = (args) => (
+    <CommentList {...(args as typeof CommentList.arguments)} />);
 
 export const Light = Template.bind({});
 Light.args = {};

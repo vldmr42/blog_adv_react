@@ -20,5 +20,6 @@
   "You enter wrong login or password": "You enter wrong login or password",
   "Main": "Main",
   "Error occured on profile loading": "Error occured on profile loading",
-  "Try to refresh the page": "Try to refresh the page"
+  "Try to refresh the page": "Try to refresh the page",
+  "No comments": "No comments"
 }

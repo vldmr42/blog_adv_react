@@ -6,7 +6,7 @@ import { Themes } from 'app/providers/ThemeProvider';
 import { ArticleCodeBlockComponent } from './ArticleCodeBlockComponent';
 
 export default {
-    title: 'pages/ArticleCodeBlockComponent',
+    title: 'entities/ArticleCodeBlockComponent',
     component: ArticleCodeBlockComponent,
     argTypes: {
         backgroundColor: { control: 'color' },
