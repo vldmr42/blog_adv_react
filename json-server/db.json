@@ -102,6 +102,30 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "1233",
+      "id": "zK7JcVe"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "comment omg",
+      "id": "aRATkaY"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "231132312",
+      "id": "ONGOyPI"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "hello",
+      "id": "7wCcZbt"
     }
   ],
   "users": [
@@ -110,7 +134,7 @@
       "username": "admin",
       "password": "123",
       "role": "ADMIN",
-      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
+      "avatar": "https://img.freepik.com/free-vector/mysterious-mafia-man-wearing-a-hat_52683-34829.jpg?w=826&t=st=1672082248~exp=1672082848~hmac=4bc4fde7c11fa9fcb13e9faddb3aecd324f71325d2b202ac57d72c8b6be18f41"
     },
     {
       "id": "2",
@@ -120,14 +144,28 @@
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
-  "profile": {
-    "first": "jgh",
-    "lastname": "asf",
-    "age": 465,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin213",
-    "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "jgh",
+      "lastname": "asf",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "admin213",
+      "avatar": "https://img.freepik.com/free-vector/mysterious-mafia-man-wearing-a-hat_52683-34829.jpg?w=826&t=st=1672082248~exp=1672082848~hmac=4bc4fde7c11fa9fcb13e9faddb3aecd324f71325d2b202ac57d72c8b6be18f41"
+    },
+    {
+      "id": "2",
+      "first": "jgh",
+      "lastname": "last name",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "ulbi tv",
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    }
+  ]
 }
