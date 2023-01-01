@@ -5,6 +5,7 @@
   "Age is incorrect": "Age is incorrect",
   "Article not found": "",
   "Auth Form": "",
+  "Back to list": "Back to list",
   "Cancel": "Cancel",
   "Comments": "Comments",
   "Decrement": "Decrement",
@@ -24,6 +25,13 @@
   "No data has been provided": "No data has been provided",
   "Profile": "",
   "Profile Page": "",
+  "Read all": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Rubles": "",
   "Save": "Save",
   "Select country": "",

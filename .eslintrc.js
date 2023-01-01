@@ -56,6 +56,7 @@ module.exports = {
         'no-param-reassign': 'off',
         '@typescript-eslint/ban-ts-comment': 'warn',
         'no-undef': 'off',
+        'react/no-array-index-key': 'off',
     },
     globals: {
         __IS_DEV__: true,
