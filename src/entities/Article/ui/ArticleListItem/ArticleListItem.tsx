@@ -63,7 +63,6 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                         {views}
                     </div>
                 </Card>
-                {article.title}
             </div>
         );
     }
