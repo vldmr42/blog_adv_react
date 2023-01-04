@@ -13,6 +13,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Text } from 'shared/ui/Text/Text';
+import { Page } from 'shared/ui/Page/Page';
 import {
     articleDetailsCommentsReducer,
     getArticleComments,
@@ -55,15 +56,15 @@ const ArticlesDetailsPage = ({ className }: ArticlesDetailsPageProps) => {
 
     if (!id) {
         return (
-            <div className={classNames(cls.ArticlesDetailsPage, {}, [className])}>
+            <Page className={classNames(cls.ArticlesDetailsPage, {}, [className])}>
                 {t('Article not found')}
-            </div>
+            </Page>
         );
     }
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames(cls.ArticlesDetailsPage, {}, [className])}>
+            <Page className={classNames(cls.ArticlesDetailsPage, {}, [className])}>
                 <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
                     {t('Back to list')}
                 </Button>
@@ -74,7 +75,7 @@ const ArticlesDetailsPage = ({ className }: ArticlesDetailsPageProps) => {
                     isLoading={commentsIsLoading}
                     comments={comments}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };
