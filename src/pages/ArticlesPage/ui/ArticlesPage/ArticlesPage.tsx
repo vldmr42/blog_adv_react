@@ -1,8 +1,9 @@
 /* eslint-disable i18next/no-literal-string */
 import {
-    Article, ArticleList, ArticleView, ArticleViewSelector,
+    ArticleList, ArticleView, ArticleViewSelector,
 } from 'entities/Article';
 import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage';
+import { initArticlesPage } from 'pages/ArticlesPage/model/services/initArticlesPage/initArticlesPage';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
@@ -12,14 +13,10 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Page } from 'shared/ui/Page/Page';
 import {
-    getArticlesPageError,
     getArticlesPageIsLoading,
-    getArticlesPageNum,
     getArticlesPageView,
-    getArticlesPageHasMore,
 }
     from '../../model/selectors/articlesPageSelectors';
-import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions, articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
 
@@ -36,10 +33,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     const dispatch = useAppDispatch();
     const articles = useSelector(getArticles.selectAll);
     const isLoading = useSelector(getArticlesPageIsLoading);
-    const error = useSelector(getArticlesPageError);
-    const page = useSelector(getArticlesPageNum);
     const view = useSelector(getArticlesPageView);
-    const hasMore = useSelector(getArticlesPageHasMore);
 
     const onChangeView = useCallback((newView: ArticleView) => {
         dispatch(articlesPageActions.setView(newView));
@@ -50,13 +44,10 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(articlesPageActions.initState());
-        dispatch(fetchArticlesList(
-            { page: 1 },
-        ));
+        dispatch(initArticlesPage());
     });
     return (
-        <DynamicModuleLoader reducers={reducers}>
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
             <Page
                 className={classNames(cls.ArticlesPage, {}, [className])}
                 onScrollEnd={onLoadNextPart}
