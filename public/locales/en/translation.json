@@ -31,5 +31,16 @@
   "Main Page": "Main Page",
   "Main": "Main",
   "About": "About",
-  "Articles": "Articles"
+  "Articles": "Articles",
+  "Sort by": "Sort by",
+  "Search": "Search",
+  "by": "by",
+  "order": "order",
+  "ascending": "ascending",
+  "descending": "descending",
+  "IT": "IT",
+  "Economics": "Economics",
+  "Science": "Science",
+  "All": "All",
+  "Articles not found": "Articles not found"
 }
