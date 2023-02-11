@@ -11,15 +11,15 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { Page } from 'widgets/Page/Page';
+import { useParams } from 'react-router-dom';
+import { articleDetailsPageReducer } from '../../model/slices';
 import {
     getArticleRecommendations,
-} from 'pages/ArticlesDetailsPage/model/slices/articleDetailsPageRecommendationsSlice';
-import { getArticleRecommendationsIsLoading } from 'pages/ArticlesDetailsPage/model/selectors/recommendations';
+} from '../../model/slices/articleDetailsPageRecommendationsSlice';
+import { getArticleRecommendationsIsLoading } from '../../model/selectors/recommendations';
 import {
     fetchArticleRecommendations,
-} from 'pages/ArticlesDetailsPage/model/services/fetchArticleRecommendations/fetchArticleRecommendations';
-import { articleDetailsPageReducer } from 'pages/ArticlesDetailsPage/model/slices';
-import { useParams } from 'react-router-dom';
+} from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
 import {
     getArticleComments,
 } from '../../model/slices/articleDetailsCommentsSlice';
