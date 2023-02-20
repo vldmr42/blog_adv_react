@@ -45,9 +45,23 @@ Error.args = {
     theme: TextTheme.ERROR,
 };
 
+export const SizeS = Template.bind({});
+SizeS.args = {
+    title: 'Title Title',
+    text: 'Really long description to see how text is going',
+    size: TextSize.S,
+};
+
+export const SizeM = Template.bind({});
+SizeM.args = {
+    title: 'Title Title',
+    text: 'Really long description to see how text is going',
+    size: TextSize.M,
+};
+
 export const SizeL = Template.bind({});
 SizeL.args = {
-    title: 'Title',
+    title: 'Title Title',
     text: 'Really long description to see how text is going',
     size: TextSize.L,
 };
