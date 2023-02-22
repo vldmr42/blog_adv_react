@@ -51,7 +51,7 @@ module.exports = {
             'error', {
                 markupOnly: true,
                 ignoreAttribute: ['data-testid', 'to', 'target',
-                    'justify', 'align', 'direction', 'gap', 'role'],
+                    'justify', 'align', 'direction', 'gap', 'role', 'as'],
             },
         ],
         'jsx-a11y/click-events-have-key-events': 'off',
