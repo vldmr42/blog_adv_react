@@ -11,6 +11,9 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [
+        (Story) => <div style={{ padding: 100 }}><Story /></div>,
+    ],
 } as ComponentMeta<typeof ListBox>;
 
 const Template: ComponentStory<typeof ListBox> = (args) => {
@@ -29,6 +32,7 @@ Light.args = {
         { value: '3', content: 'asd' },
         { value: '4', content: 'ddd', disabled: true },
     ],
+    direction: 'top left',
 
 };
 
