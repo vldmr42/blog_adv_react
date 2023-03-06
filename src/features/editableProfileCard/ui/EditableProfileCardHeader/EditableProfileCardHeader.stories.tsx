@@ -3,18 +3,18 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Themes } from 'app/providers/ThemeProvider';
-import { ArticleSortSelector } from './ArticleSortSelector';
+import { EditableProfileCardHeader } from './EditableProfileCardHeader';
 
 export default {
-    title: 'entities/Article/ArticleSortSelector',
-    component: ArticleSortSelector,
+    title: 'features/editableProfileCard/EditableProfileCardHeader',
+    component: EditableProfileCardHeader,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof ArticleSortSelector>;
+} as ComponentMeta<typeof EditableProfileCardHeader>;
 
-const Template: ComponentStory<typeof ArticleSortSelector> = (args) => (
-    <ArticleSortSelector {...(args as typeof ArticleSortSelector.arguments)} />);
+const Template: ComponentStory<typeof EditableProfileCardHeader> = (args) => (
+    <EditableProfileCardHeader {...(args as typeof EditableProfileCardHeader.arguments)} />);
 
 export const Light = Template.bind({});
 Light.args = {};

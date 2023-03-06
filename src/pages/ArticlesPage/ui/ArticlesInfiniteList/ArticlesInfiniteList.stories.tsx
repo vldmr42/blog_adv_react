@@ -3,18 +3,18 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Themes } from 'app/providers/ThemeProvider';
-import { ArticleSortSelector } from './ArticleSortSelector';
+import { ArticlesInfiniteList } from './ArticlesInfiniteList';
 
 export default {
-    title: 'entities/Article/ArticleSortSelector',
-    component: ArticleSortSelector,
+    title: 'pages/ArticlesPage/ArticlesInfiniteList',
+    component: ArticlesInfiniteList,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof ArticleSortSelector>;
+} as ComponentMeta<typeof ArticlesInfiniteList>;
 
-const Template: ComponentStory<typeof ArticleSortSelector> = (args) => (
-    <ArticleSortSelector {...(args as typeof ArticleSortSelector.arguments)} />);
+const Template: ComponentStory<typeof ArticlesInfiniteList> = (args) => (
+    <ArticlesInfiniteList {...(args as typeof ArticlesInfiniteList.arguments)} />);
 
 export const Light = Template.bind({});
 Light.args = {};

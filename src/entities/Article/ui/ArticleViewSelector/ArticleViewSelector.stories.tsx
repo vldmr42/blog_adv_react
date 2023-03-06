@@ -6,7 +6,7 @@ import { Themes } from 'app/providers/ThemeProvider';
 import { ArticleViewSelector } from './ArticleViewSelector';
 
 export default {
-    title: 'pages/ArticleViewSelector',
+    title: 'entities/Article/ArticleViewSelector',
     component: ArticleViewSelector,
     argTypes: {
         backgroundColor: { control: 'color' },

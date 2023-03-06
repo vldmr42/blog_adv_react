@@ -17,7 +17,8 @@ const Template: ComponentStory<typeof ArticleCodeBlockComponent> = (args) => (
     <ArticleCodeBlockComponent {...(args as typeof ArticleCodeBlockComponent.arguments)} />);
 
 export const Light = Template.bind({});
-Light.args = {};
+Light.args = {
+};
 
 export const Dark = Template.bind({});
 Dark.args = {};

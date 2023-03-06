@@ -24,6 +24,7 @@
   "Enter username": "",
   "Error occured during loading": "",
   "Error occured on profile loading": "Error occured on profile loading",
+  "Error while loading articles": "",
   "Euro": "",
   "Firstname and Lastname are required": "Firstname and Lastname are required",
   "IT": "IT",
@@ -37,6 +38,7 @@
   "No data has been provided": "No data has been provided",
   "Profile": "",
   "Profile Page": "",
+  "Profile not found": "Profile not found",
   "Read all": {
     "": {
       "": {

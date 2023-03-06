@@ -3,18 +3,18 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Themes } from 'app/providers/ThemeProvider';
-import { ArticleSortSelector } from './ArticleSortSelector';
+import { ArticleDetailsComments } from './ArticleDetailsComments';
 
 export default {
-    title: 'entities/Article/ArticleSortSelector',
-    component: ArticleSortSelector,
+    title: 'pages/ArticlesDetailsPage/ArticleDetailsComments',
+    component: ArticleDetailsComments,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof ArticleSortSelector>;
+} as ComponentMeta<typeof ArticleDetailsComments>;
 
-const Template: ComponentStory<typeof ArticleSortSelector> = (args) => (
-    <ArticleSortSelector {...(args as typeof ArticleSortSelector.arguments)} />);
+const Template: ComponentStory<typeof ArticleDetailsComments> = (args) => (
+    <ArticleDetailsComments {...(args as typeof ArticleDetailsComments.arguments)} />);
 
 export const Light = Template.bind({});
 Light.args = {};
