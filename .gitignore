@@ -27,3 +27,4 @@ yarn-error.log*
 
 .loki/report.html
 .loki/report.json
+/reports
