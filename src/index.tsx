@@ -1,5 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import { ThemeProvider } from 'app/providers/ThemeProvider';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
@@ -7,11 +7,10 @@ import { StoreProvider } from 'app/providers/StoreProvider';
 import App from './app/App';
 import 'app/styles/index.scss';
 import 'shared/config/i18n/i18n';
-import { createRoot } from 'react-dom/client';
 
 const container = document.getElementById('root');
-if(!container){
-    throw new Error('Root container not found. Cannot mount react app')
+if (!container) {
+    throw new Error('Root container not found. Cannot mount react app');
 }
 const root = createRoot(container);
 root.render(
@@ -25,4 +24,3 @@ root.render(
         </StoreProvider>
     </BrowserRouter>,
 );
-

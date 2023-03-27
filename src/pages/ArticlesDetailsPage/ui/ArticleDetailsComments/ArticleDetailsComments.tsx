@@ -8,11 +8,11 @@ import { useSelector } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { VStack } from 'shared/ui/Stack';
+import { Loader } from 'shared/ui/Loader/Loader';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { getArticleComments } from '../../model/slices/articleDetailsCommentsSlice';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
-import { Loader } from 'shared/ui/Loader/Loader';
 
 interface ArticleDetailsCommentsProps {
     id?: string
@@ -41,7 +41,7 @@ export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) 
                 size={TextSize.L}
                 title={t('Comments')}
             />
-            <Suspense fallback={<Loader/>}>
+            <Suspense fallback={<Loader />}>
                 <AddCommentForm onSendComment={onSendComment} />
             </Suspense>
             <CommentList
