@@ -3,29 +3,21 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Themes } from 'app/providers/ThemeProvider';
-import { Dropdown } from './Dropdown';
-import { Button } from '../Button/Button';
+import { NotificationItem } from './NotificationItem';
 
 export default {
-    title: 'shared/Dropdown',
-    component: Dropdown,
+    title: 'pages/NotificationItem',
+    component: NotificationItem,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof Dropdown>;
+} as ComponentMeta<typeof NotificationItem>;
 
-const Template: ComponentStory<typeof Dropdown> = (args) => (
-    <Dropdown {...(args as typeof Dropdown.arguments)} />);
+const Template: ComponentStory<typeof NotificationItem> = (args) => (
+    <NotificationItem {...(args as typeof NotificationItem.arguments)} />);
 
 export const Light = Template.bind({});
-Light.args = {
-    trigger: <Button>Open</Button>,
-    items: [
-        { content: 'first' },
-        { content: 'second' },
-        { content: 'third' },
-    ],
-};
+Light.args = {};
 
 export const Dark = Template.bind({});
 Dark.args = {};
