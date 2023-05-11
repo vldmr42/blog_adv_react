@@ -1,4 +1,4 @@
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import {
     DetailedHTMLProps, HTMLAttributes, memo, ReactNode,
 } from 'react';

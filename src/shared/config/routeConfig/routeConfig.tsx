@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-vars */
-import { UserRole } from 'entities/User';
-import { AboutPage } from 'pages/AboutPage';
-import { AdminPanelPage } from 'pages/AdminPanelPage';
-import ArticleEditPage from 'pages/ArticleEditPage/ui/ArticleEditPage/ArticleEditPage';
-import { ArticlesDetailsPage } from 'pages/ArticlesDetailsPage';
-import { ArticlesPage } from 'pages/ArticlesPage';
-import { ForbiddenPage } from 'pages/ForbiddenPage';
-import { MainPage } from 'pages/MainPage';
-import { NotFoundPage } from 'pages/NotFoundPage';
-import { ProfilePage } from 'pages/ProfilePage';
+import { UserRole } from '@/entities/User';
+import { AboutPage } from '@/pages/AboutPage';
+import { AdminPanelPage } from '@/pages/AdminPanelPage';
+import ArticleEditPage from '@/pages/ArticleEditPage/ui/ArticleEditPage/ArticleEditPage';
+import { ArticlesDetailsPage } from '@/pages/ArticlesDetailsPage';
+import { ArticlesPage } from '@/pages/ArticlesPage';
+import { ForbiddenPage } from '@/pages/ForbiddenPage';
+import { MainPage } from '@/pages/MainPage';
+import { NotFoundPage } from '@/pages/NotFoundPage';
+import { ProfilePage } from '@/pages/ProfilePage';
 import { RouteProps } from 'react-router-dom';
 
 export type AppRouteProps = RouteProps & {
