@@ -1,5 +1,5 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo, useCallback, useState } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { NotificationList } from '@/entities/Notification';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import { Icon } from '@/shared/ui/Icon/Icon';
@@ -37,11 +37,9 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
         return (
             <div>
                 {trigger}
-                <AnimationProvider>
-                    <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
-                        <NotificationList />
-                    </Drawer>
-                </AnimationProvider>
+                <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
+                    <NotificationList />
+                </Drawer>
             </div>
         );
     }

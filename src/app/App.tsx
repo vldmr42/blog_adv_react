@@ -1,6 +1,6 @@
-import { getUserInited, userActions } from '@/entities/User';
 import { Suspense, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { getUserInited, userActions } from '@/entities/User';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Navbar } from '@/widgets/Navbar';
