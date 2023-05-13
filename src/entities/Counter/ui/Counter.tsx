@@ -16,11 +16,13 @@ export const Counter = () => {
     const { t } = useTranslation();
     return (
         <div>
-            <h1 data-testid="value-title">
-                {counterValue}
-            </h1>
-            <Button data-testid="increment-btn" onClick={increment}>{t('Increment')}</Button>
-            <Button data-testid="decrement-btn" onClick={decrement}>{t('Decrement')}</Button>
+            <h1 data-testid="value-title">{counterValue}</h1>
+            <Button data-testid="increment-btn" onClick={increment}>
+                {t('Increment')}
+            </Button>
+            <Button data-testid="decrement-btn" onClick={decrement}>
+                {t('Decrement')}
+            </Button>
         </div>
     );
 };

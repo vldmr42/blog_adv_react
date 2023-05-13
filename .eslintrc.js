@@ -9,6 +9,7 @@ module.exports = {
         'airbnb',
         'plugin:i18next/recommended',
         'plugin:@typescript-eslint/recommended',
+        'prettier',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -27,9 +28,9 @@ module.exports = {
     ],
     rules: {
         'max-len': ['warn', { ignoreComments: true, code: 120 }],
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
-        indent: [2, 4],
+        // 'react/jsx-indent': [2, 4],
+        // 'react/jsx-indent-props': [2, 4],
+        // indent: [2, 4],
         'react/jsx-filename-extension': [
             2,
             { extensions: ['.js', '.jsx', '.tsx'] },
@@ -48,10 +49,21 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': [
-            'error', {
+            'error',
+            {
                 markupOnly: true,
-                ignoreAttribute: ['data-testid', 'to', 'target',
-                    'justify', 'align', 'direction', 'gap', 'role', 'as', 'border'],
+                ignoreAttribute: [
+                    'data-testid',
+                    'to',
+                    'target',
+                    'justify',
+                    'align',
+                    'direction',
+                    'gap',
+                    'role',
+                    'as',
+                    'border',
+                ],
             },
         ],
         'jsx-a11y/click-events-have-key-events': 'off',
@@ -64,6 +76,7 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
         'vldmr-plugin/path-checker': 'error',
+        'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
     },
     globals: {
         __IS_DEV__: true,

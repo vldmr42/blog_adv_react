@@ -6,9 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import { LoginModal } from '@/features/AuthByUsername';
-import {
-    getUserAuthData,
-} from '@/entities/User';
+import { getUserAuthData } from '@/entities/User';
 import { Text, TextTheme } from '@/shared/ui/Text/Text';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
 import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
@@ -19,7 +17,7 @@ import { AvatarDropdown } from '@/features/avatarDropdown';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
-  className?: string;
+    className?: string;
 }
 
 export const Navbar = memo(({ className }: NavbarProps) => {
@@ -48,15 +46,12 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     theme={AppLinkTheme.SECONDARY}
                     className={cls.createBtn}
                 >
-
                     {t('Create article')}
                 </AppLink>
                 <HStack gap="16" className={cls.actions}>
-
                     <NotificationButton />
                     <AvatarDropdown />
                 </HStack>
-
             </header>
         );
     }
@@ -71,10 +66,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 {t('Login')}
             </Button>
             {isAuthModal && (
-                <LoginModal
-                    isOpen={isAuthModal}
-                    onClose={onCloseModal}
-                />
+                <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
             )}
         </header>
     );

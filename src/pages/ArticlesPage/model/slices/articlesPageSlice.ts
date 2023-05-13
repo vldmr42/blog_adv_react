@@ -5,7 +5,10 @@ import {
 } from '@reduxjs/toolkit';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import {
-    Article, ArticleView, ArticleSortField, ArticleType,
+    Article,
+    ArticleView,
+    ArticleSortField,
+    ArticleType,
 } from '@/entities/Article';
 import { ARTICLE_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { SortOrder } from '@/shared/types';
@@ -22,23 +25,21 @@ export const getArticles = articlesAdapter.getSelectors<StateSchema>(
 
 const articlesPageSlice = createSlice({
     name: 'articlesPageSlice',
-    initialState: articlesAdapter.getInitialState<ArticlesPageSchema>(
-        {
-            isLoading: false,
-            error: undefined,
-            ids: [],
-            entities: {},
-            view: ArticleView.SMALL,
-            page: 1,
-            hasMore: true,
-            limit: 4,
-            _inited: false,
-            sort: ArticleSortField.CREATED,
-            search: '',
-            order: 'asc',
-            type: ArticleType.ALL,
-        },
-    ),
+    initialState: articlesAdapter.getInitialState<ArticlesPageSchema>({
+        isLoading: false,
+        error: undefined,
+        ids: [],
+        entities: {},
+        view: ArticleView.SMALL,
+        page: 1,
+        hasMore: true,
+        limit: 4,
+        _inited: false,
+        sort: ArticleSortField.CREATED,
+        search: '',
+        order: 'asc',
+        type: ArticleType.ALL,
+    }),
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {
             state.view = action.payload;
@@ -60,7 +61,9 @@ const articlesPageSlice = createSlice({
             state.type = action.payload;
         },
         initState: (state) => {
-            const view = localStorage.getItem(ARTICLE_VIEW_LOCALSTORAGE_KEY) as ArticleView;
+            const view = localStorage.getItem(
+                ARTICLE_VIEW_LOCALSTORAGE_KEY,
+            ) as ArticleView;
             state.view = view;
             state.limit = view === ArticleView.BIG ? 4 : 9;
             state._inited = true;
@@ -76,10 +79,7 @@ const articlesPageSlice = createSlice({
                     articlesAdapter.removeAll(state);
                 }
             })
-            .addCase(fetchArticlesList.fulfilled, (
-                state,
-                action,
-            ) => {
+            .addCase(fetchArticlesList.fulfilled, (state, action) => {
                 state.isLoading = false;
 
                 state.hasMore = action.payload.length >= state.limit;
@@ -95,10 +95,7 @@ const articlesPageSlice = createSlice({
                 state.error = action.payload;
             });
     },
-
 });
 
-export const {
-    reducer: articlesPageReducer,
-    actions: articlesPageActions,
-} = articlesPageSlice;
+export const { reducer: articlesPageReducer, actions: articlesPageActions } =
+    articlesPageSlice;

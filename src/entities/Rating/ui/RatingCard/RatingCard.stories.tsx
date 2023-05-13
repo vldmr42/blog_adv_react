@@ -14,7 +14,8 @@ export default {
 } as ComponentMeta<typeof RatingCard>;
 
 const Template: ComponentStory<typeof RatingCard> = (args) => (
-    <RatingCard {...(args as typeof RatingCard.arguments)} />);
+    <RatingCard {...(args as typeof RatingCard.arguments)} />
+);
 
 export const Light = Template.bind({});
 Light.args = {};

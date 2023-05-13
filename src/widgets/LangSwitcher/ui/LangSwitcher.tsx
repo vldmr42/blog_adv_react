@@ -4,8 +4,8 @@ import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import cls from './LangSwitcher.module.scss';
 
 interface LangSwitcherProps {
-  className?: string;
-  short?: boolean;
+    className?: string;
+    short?: boolean;
 }
 
 export const LangSwitcher = ({ className, short }: LangSwitcherProps) => {

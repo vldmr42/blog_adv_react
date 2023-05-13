@@ -14,7 +14,8 @@ export default {
 } as ComponentMeta<typeof NotificationItem>;
 
 const Template: ComponentStory<typeof NotificationItem> = (args) => (
-    <NotificationItem {...(args as typeof NotificationItem.arguments)} />);
+    <NotificationItem {...(args as typeof NotificationItem.arguments)} />
+);
 
 export const Light = Template.bind({});
 Light.args = {};

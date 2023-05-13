@@ -3,7 +3,7 @@ import { ArticleBlockType, ArticleType } from '../consts/consts';
 
 export interface ArticleBlockBase {
     id: string;
-    type: ArticleBlockType
+    type: ArticleBlockType;
 }
 
 export interface ArticleCodeBlock extends ArticleBlockBase {
@@ -20,10 +20,13 @@ export interface ArticleImageBlock extends ArticleBlockBase {
 export interface ArticleTextBlock extends ArticleBlockBase {
     type: ArticleBlockType.TEXT;
     title?: string;
-    paragraphs: string[]
+    paragraphs: string[];
 }
 
-export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock
+export type ArticleBlock =
+    | ArticleCodeBlock
+    | ArticleImageBlock
+    | ArticleTextBlock;
 
 export interface Article {
     id: string;

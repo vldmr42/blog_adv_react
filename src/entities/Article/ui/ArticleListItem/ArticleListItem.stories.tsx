@@ -27,9 +27,7 @@ const article = {
         username: 'Ulbi tv',
         avatar: 'https://img.freepik.com/free-vector/mysterious-mafia-man-wearing-a-hat_52683-34829.jpg?w=826&t=st=1672082248~exp=1672082848~hmac=4bc4fde7c11fa9fcb13e9faddb3aecd324f71325d2b202ac57d72c8b6be18f41',
     },
-    type: [
-        'IT',
-    ],
+    type: ['IT'],
     blocks: [
         {
             id: '1',
@@ -93,7 +91,8 @@ const article = {
 } as Article;
 
 const Template: ComponentStory<typeof ArticleListItem> = (args) => (
-    <ArticleListItem {...(args as typeof ArticleListItem.arguments)} />);
+    <ArticleListItem {...(args as typeof ArticleListItem.arguments)} />
+);
 
 export const Big = Template.bind({});
 Big.args = {

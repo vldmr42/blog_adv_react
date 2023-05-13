@@ -14,7 +14,8 @@ export default {
 } as ComponentMeta<typeof AvatarDropdown>;
 
 const Template: ComponentStory<typeof AvatarDropdown> = (args) => (
-    <AvatarDropdown {...(args as typeof AvatarDropdown.arguments)} />);
+    <AvatarDropdown {...(args as typeof AvatarDropdown.arguments)} />
+);
 
 export const Light = Template.bind({});
 Light.args = {};

@@ -14,7 +14,8 @@ export default {
 } as ComponentMeta<typeof ArticleEditPage>;
 
 const Template: ComponentStory<typeof ArticleEditPage> = (args) => (
-    <ArticleEditPage {...(args as typeof ArticleEditPage.arguments)} />);
+    <ArticleEditPage {...(args as typeof ArticleEditPage.arguments)} />
+);
 
 export const Light = Template.bind({});
 Light.args = {};

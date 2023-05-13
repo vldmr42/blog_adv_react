@@ -107,5 +107,4 @@ Disabled.args = {
     theme: ButtonTheme.OUTLINE,
     size: ButtonSize.XL,
     disabled: true,
-
 };

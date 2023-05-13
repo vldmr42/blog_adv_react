@@ -48,14 +48,24 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     if (isLoading) {
         return (
-            <div className={classNames(cls.ProfileCard, { [cls.loading]: true }, [className])}>
+            <div
+                className={classNames(
+                    cls.ProfileCard,
+                    { [cls.loading]: true },
+                    [className],
+                )}
+            >
                 <Loader />
             </div>
         );
     }
 
     if (error) {
-        <HStack justify="center" max className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+        <HStack
+            justify="center"
+            max
+            className={classNames(cls.ProfileCard, {}, [className, cls.error])}
+        >
             <Text
                 theme={TextTheme.ERROR}
                 title={t('Error occured on profile loading')}
@@ -70,7 +80,11 @@ export const ProfileCard = (props: ProfileCardProps) => {
     };
 
     return (
-        <VStack gap="16" max className={classNames(cls.ProfileCard, mods, [className])}>
+        <VStack
+            gap="16"
+            max
+            className={classNames(cls.ProfileCard, mods, [className])}
+        >
             {data?.avatar && (
                 <HStack justify="center" max className={cls.avatarWrapper}>
                     <Avatar src={data?.avatar} />

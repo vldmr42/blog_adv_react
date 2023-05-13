@@ -12,13 +12,16 @@ export default {
         backgroundColor: { control: 'color' },
     },
     decorators: [
-        (Story) => <div style={{ padding: 100 }}><Story /></div>,
+        (Story) => (
+            <div style={{ padding: 100 }}>
+                <Story />
+            </div>
+        ),
     ],
 } as ComponentMeta<typeof ListBox>;
 
 const Template: ComponentStory<typeof ListBox> = (args) => {
-    return (
-        <ListBox {...(args as typeof ListBox.arguments)} />);
+    return <ListBox {...(args as typeof ListBox.arguments)} />;
 };
 
 export const Light = Template.bind({});
@@ -33,7 +36,6 @@ Light.args = {
         { value: '4', content: 'ddd', disabled: true },
     ],
     direction: 'top left',
-
 };
 
 export const Dark = Template.bind({});

@@ -27,7 +27,8 @@ const comments = [
 ];
 
 const Template: ComponentStory<typeof CommentList> = (args) => (
-    <CommentList {...(args as typeof CommentList.arguments)} />);
+    <CommentList {...(args as typeof CommentList.arguments)} />
+);
 
 export const Light = Template.bind({});
 Light.args = {

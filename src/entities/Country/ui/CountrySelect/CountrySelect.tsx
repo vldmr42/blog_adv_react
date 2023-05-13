@@ -6,7 +6,7 @@ import { Country } from '../../model/types/country';
 interface CountrySelectProps {
     className?: string;
     value?: Country;
-    onChange?: (value: Country)=> void;
+    onChange?: (value: Country) => void;
     readonly?: boolean;
 }
 
@@ -18,24 +18,27 @@ const options = [
     { value: Country.Ukraine, content: Country.Ukraine },
 ];
 
-export const CountrySelect = memo(({
-    className, value, onChange, readonly,
-}: CountrySelectProps) => {
-    const { t } = useTranslation();
+export const CountrySelect = memo(
+    ({ className, value, onChange, readonly }: CountrySelectProps) => {
+        const { t } = useTranslation();
 
-    const onChangeHandler = useCallback((value: string) => {
-        onChange?.(value as Country);
-    }, [onChange]);
+        const onChangeHandler = useCallback(
+            (value: string) => {
+                onChange?.(value as Country);
+            },
+            [onChange],
+        );
 
-    return (
-        <ListBox
-            label={t('Select country')}
-            defaultValue={t('Select country')}
-            items={options}
-            value={value}
-            readonly={readonly}
-            onChange={onChangeHandler}
-            className={className}
-        />
-    );
-});
+        return (
+            <ListBox
+                label={t('Select country')}
+                defaultValue={t('Select country')}
+                items={options}
+                value={value}
+                readonly={readonly}
+                onChange={onChangeHandler}
+                className={className}
+            />
+        );
+    },
+);

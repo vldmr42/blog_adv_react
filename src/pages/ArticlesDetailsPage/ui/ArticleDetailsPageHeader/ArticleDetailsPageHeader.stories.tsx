@@ -14,7 +14,10 @@ export default {
 } as ComponentMeta<typeof ArticleDetailsPageHeader>;
 
 const Template: ComponentStory<typeof ArticleDetailsPageHeader> = (args) => (
-    <ArticleDetailsPageHeader {...(args as typeof ArticleDetailsPageHeader.arguments)} />);
+    <ArticleDetailsPageHeader
+        {...(args as typeof ArticleDetailsPageHeader.arguments)}
+    />
+);
 
 export const Light = Template.bind({});
 Light.args = {};

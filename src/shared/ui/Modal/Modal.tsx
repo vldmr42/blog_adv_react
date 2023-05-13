@@ -1,6 +1,4 @@
-import React, {
-    ReactNode,
-} from 'react';
+import React, { ReactNode } from 'react';
 import { useTheme } from '@/app/providers/ThemeProvider';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import { useModal } from '@/shared/lib/hooks/useModal/useModal';
@@ -13,15 +11,13 @@ interface ModalProps {
     children?: ReactNode;
     isOpen?: boolean;
     onClose?: () => void;
-    lazy?: boolean
+    lazy?: boolean;
 }
 
 const ANIMATION_DELAY = 300;
 
 export const Modal = (props: ModalProps) => {
-    const {
-        className, children, isOpen, onClose, lazy = true,
-    } = props;
+    const { className, children, isOpen, onClose, lazy = true } = props;
     const { theme } = useTheme();
 
     const { close, isClosing, isMounted } = useModal({
@@ -39,11 +35,15 @@ export const Modal = (props: ModalProps) => {
     }
     return (
         <Portal>
-            <div className={classNames(cls.Modal, mods, [className, theme, 'app_modal'])}>
+            <div
+                className={classNames(cls.Modal, mods, [
+                    className,
+                    theme,
+                    'app_modal',
+                ])}
+            >
                 <Overlay onClick={close} />
-                <div className={cls.content}>
-                    {children}
-                </div>
+                <div className={cls.content}>{children}</div>
             </div>
         </Portal>
     );

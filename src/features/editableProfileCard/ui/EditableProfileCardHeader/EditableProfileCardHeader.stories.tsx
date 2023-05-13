@@ -15,7 +15,10 @@ export default {
 } as ComponentMeta<typeof EditableProfileCardHeader>;
 
 const Template: ComponentStory<typeof EditableProfileCardHeader> = (args) => (
-    <EditableProfileCardHeader {...(args as typeof EditableProfileCardHeader.arguments)} />);
+    <EditableProfileCardHeader
+        {...(args as typeof EditableProfileCardHeader.arguments)}
+    />
+);
 
 export const Light = Template.bind({});
 Light.args = {};

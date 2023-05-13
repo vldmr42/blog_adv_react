@@ -15,7 +15,8 @@ export default {
 } as ComponentMeta<typeof Card>;
 
 const Template: ComponentStory<typeof Card> = (args) => (
-    <Card {...(args as typeof Card.arguments)} />);
+    <Card {...(args as typeof Card.arguments)} />
+);
 
 export const Light = Template.bind({});
 Light.args = {

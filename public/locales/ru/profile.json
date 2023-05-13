@@ -1,9 +1,9 @@
 {
-  "Profile": "Профиль",
-  "Edit": "Редактировать",
-  "Server error": "Ошибка сервера",
-  "Age is incorrect": "Неверный возраст",
-  "Incorrect country": "Неверная страна",
-  "Firstname and Lastname are required": "Имя и Фамилия обязательны",
-  "No data has been provided": "Данные не предоставлены"
+    "Profile": "Профиль",
+    "Edit": "Редактировать",
+    "Server error": "Ошибка сервера",
+    "Age is incorrect": "Неверный возраст",
+    "Incorrect country": "Неверная страна",
+    "Firstname and Lastname are required": "Имя и Фамилия обязательны",
+    "No data has been provided": "Данные не предоставлены"
 }

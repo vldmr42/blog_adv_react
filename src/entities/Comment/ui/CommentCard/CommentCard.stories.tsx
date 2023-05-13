@@ -14,7 +14,8 @@ export default {
 } as ComponentMeta<typeof CommentCard>;
 
 const Template: ComponentStory<typeof CommentCard> = (args) => (
-    <CommentCard {...(args as typeof CommentCard.arguments)} />);
+    <CommentCard {...(args as typeof CommentCard.arguments)} />
+);
 
 export const Light = Template.bind({});
 Light.args = {};

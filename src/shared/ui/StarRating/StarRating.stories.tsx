@@ -14,7 +14,8 @@ export default {
 } as ComponentMeta<typeof StarRating>;
 
 const Template: ComponentStory<typeof StarRating> = (args) => (
-    <StarRating {...(args as typeof StarRating.arguments)} />);
+    <StarRating {...(args as typeof StarRating.arguments)} />
+);
 
 export const Light = Template.bind({});
 Light.args = {};

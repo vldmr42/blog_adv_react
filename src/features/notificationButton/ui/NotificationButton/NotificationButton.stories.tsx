@@ -14,7 +14,8 @@ export default {
 } as ComponentMeta<typeof NotificationButton>;
 
 const Template: ComponentStory<typeof NotificationButton> = (args) => (
-    <NotificationButton {...(args as typeof NotificationButton.arguments)} />);
+    <NotificationButton {...(args as typeof NotificationButton.arguments)} />
+);
 
 export const Light = Template.bind({});
 Light.args = {};

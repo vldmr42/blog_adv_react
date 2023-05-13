@@ -15,16 +15,13 @@ export default {
 } as ComponentMeta<typeof Dropdown>;
 
 const Template: ComponentStory<typeof Dropdown> = (args) => (
-    <Dropdown {...(args as typeof Dropdown.arguments)} />);
+    <Dropdown {...(args as typeof Dropdown.arguments)} />
+);
 
 export const Light = Template.bind({});
 Light.args = {
     trigger: <Button>Open</Button>,
-    items: [
-        { content: 'first' },
-        { content: 'second' },
-        { content: 'third' },
-    ],
+    items: [{ content: 'first' }, { content: 'second' }, { content: 'third' }],
 };
 
 export const Dark = Template.bind({});

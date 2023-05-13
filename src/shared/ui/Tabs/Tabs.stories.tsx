@@ -15,7 +15,8 @@ export default {
 } as ComponentMeta<typeof Tabs>;
 
 const Template: ComponentStory<typeof Tabs> = (args) => (
-    <Tabs {...(args as typeof Tabs.arguments)} />);
+    <Tabs {...(args as typeof Tabs.arguments)} />
+);
 
 export const Light = Template.bind({});
 Light.args = {

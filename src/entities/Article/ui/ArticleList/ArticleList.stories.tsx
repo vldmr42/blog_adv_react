@@ -19,9 +19,7 @@ const article = {
         username: 'Ulbi tv',
         avatar: 'https://img.freepik.com/free-vector/mysterious-mafia-man-wearing-a-hat_52683-34829.jpg?w=826&t=st=1672082248~exp=1672082848~hmac=4bc4fde7c11fa9fcb13e9faddb3aecd324f71325d2b202ac57d72c8b6be18f41',
     },
-    type: [
-        'IT',
-    ],
+    type: ['IT'],
     blocks: [
         {
             id: '1',
@@ -93,7 +91,8 @@ export default {
 } as ComponentMeta<typeof ArticleList>;
 
 const Template: ComponentStory<typeof ArticleList> = (args) => (
-    <ArticleList {...(args as typeof ArticleList.arguments)} />);
+    <ArticleList {...(args as typeof ArticleList.arguments)} />
+);
 
 export const isLoadingSmall = Template.bind({});
 isLoadingSmall.args = {
@@ -127,24 +126,20 @@ isLoadingBigDark.decorators = [ThemeDecorator(Themes.DARK)];
 
 export const Big = Template.bind({});
 Big.args = {
-    articles: new Array(9)
-        .fill(0)
-        .map((item, index) => ({
-            ...article,
-            id: String(index),
-        })),
+    articles: new Array(9).fill(0).map((item, index) => ({
+        ...article,
+        id: String(index),
+    })),
     isLoading: false,
     view: ArticleView.BIG,
 };
 
 export const Small = Template.bind({});
 Small.args = {
-    articles: new Array(9)
-        .fill(0)
-        .map((item, index) => ({
-            ...article,
-            id: String(index),
-        })),
+    articles: new Array(9).fill(0).map((item, index) => ({
+        ...article,
+        id: String(index),
+    })),
     isLoading: false,
     view: ArticleView.SMALL,
 };

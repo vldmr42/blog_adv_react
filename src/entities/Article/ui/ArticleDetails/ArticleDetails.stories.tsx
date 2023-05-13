@@ -91,15 +91,18 @@ export default {
 } as ComponentMeta<typeof ArticleDetails>;
 
 const Template: ComponentStory<typeof ArticleDetails> = (args) => (
-    <ArticleDetails {...(args as typeof ArticleDetails.arguments)} />);
+    <ArticleDetails {...(args as typeof ArticleDetails.arguments)} />
+);
 
 export const Light = Template.bind({});
 Light.args = {};
-Light.decorators = [StoreDecorator({
-    articleDetails: {
-        data: article,
-    },
-})];
+Light.decorators = [
+    StoreDecorator({
+        articleDetails: {
+            data: article,
+        },
+    }),
+];
 
 export const Dark = Template.bind({});
 Dark.args = {};
@@ -107,16 +110,20 @@ Dark.decorators = [ThemeDecorator(Themes.DARK), ...Light.decorators];
 
 export const Loading = Template.bind({});
 Loading.args = {};
-Loading.decorators = [StoreDecorator({
-    articleDetails: {
-        isLoading: true,
-    },
-})];
+Loading.decorators = [
+    StoreDecorator({
+        articleDetails: {
+            isLoading: true,
+        },
+    }),
+];
 
 export const Error = Template.bind({});
 Error.args = {};
-Error.decorators = [StoreDecorator({
-    articleDetails: {
-        error: 'Error',
-    },
-})];
+Error.decorators = [
+    StoreDecorator({
+        articleDetails: {
+            error: 'Error',
+        },
+    }),
+];

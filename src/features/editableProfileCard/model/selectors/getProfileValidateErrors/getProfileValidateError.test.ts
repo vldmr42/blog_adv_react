@@ -9,10 +9,14 @@ describe('getProfileValidateErrors.test', () => {
                 validateErrors: [ValidateProfileError.NO_DATA],
             },
         };
-        expect(getProfileValidateErrors(state as StateSchema)).toEqual([ValidateProfileError.NO_DATA]);
+        expect(getProfileValidateErrors(state as StateSchema)).toEqual([
+            ValidateProfileError.NO_DATA,
+        ]);
     });
     test('should work with empty state', () => {
         const state: DeepPartial<StateSchema> = {};
-        expect(getProfileValidateErrors(state as StateSchema)).toEqual(undefined);
+        expect(getProfileValidateErrors(state as StateSchema)).toEqual(
+            undefined,
+        );
     });
 });

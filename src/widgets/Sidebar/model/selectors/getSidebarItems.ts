@@ -8,40 +8,36 @@ import ArticlesIcon from '@/shared/assets/icons/article-20-20.svg';
 import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { SidebarItemType } from '../types/sidebar';
 
-export const getSidebarItems = createSelector(
-    getUserAuthData,
-    (userData) => {
-        const sidebarItemsList: SidebarItemType[] = [
+export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
+    const sidebarItemsList: SidebarItemType[] = [
+        {
+            path: RoutePath.main,
+            Icon: MainIcon,
+            text: 'Main',
+        },
+        {
+            path: RoutePath.about,
+            Icon: AboutIcon,
+            text: 'About',
+        },
+    ];
+
+    if (userData) {
+        sidebarItemsList.push(
             {
-                path: RoutePath.main,
-                Icon: MainIcon,
-                text: 'Main',
+                path: RoutePath.profile + userData.id,
+                Icon: ProfileIcon,
+                text: 'Profile',
+                authOnly: true,
             },
             {
-                path: RoutePath.about,
-                Icon: AboutIcon,
-                text: 'About',
+                path: RoutePath.articles,
+                Icon: ArticlesIcon,
+                text: 'Articles',
+                authOnly: true,
             },
+        );
+    }
 
-        ];
-
-        if (userData) {
-            sidebarItemsList.push(
-                {
-                    path: RoutePath.profile + userData.id,
-                    Icon: ProfileIcon,
-                    text: 'Profile',
-                    authOnly: true,
-                },
-                {
-                    path: RoutePath.articles,
-                    Icon: ArticlesIcon,
-                    text: 'Articles',
-                    authOnly: true,
-                },
-            );
-        }
-
-        return sidebarItemsList;
-    },
-);
+    return sidebarItemsList;
+});

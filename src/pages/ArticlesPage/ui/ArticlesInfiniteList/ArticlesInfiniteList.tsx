@@ -34,7 +34,7 @@ export const ArticlesInfiniteList = memo((props: ArticlesInfiniteListProps) => {
     });
 
     if (error) {
-        return (<Text text={t('Error while loading articles') as string} />);
+        return <Text text={t('Error while loading articles') as string} />;
     }
 
     return (
@@ -44,6 +44,5 @@ export const ArticlesInfiniteList = memo((props: ArticlesInfiniteListProps) => {
             articles={articles}
             className={className}
         />
-
     );
 });

@@ -52,7 +52,6 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
             >
                 <NotificationList className={cls.notifications} />
             </Popover>
-
         </div>
     );
 });
