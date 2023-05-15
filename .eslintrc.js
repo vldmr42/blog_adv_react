@@ -75,7 +75,7 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
-        'vldmr-plugin/path-checker': 'error',
+        'vldmr-plugin/path-checker': ['error', { alias: '@' }],
         'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
     },
     globals: {
