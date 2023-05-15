@@ -6,7 +6,7 @@ import { Themes } from '@/app/providers/ThemeProvider';
 import { NotificationItem } from './NotificationItem';
 
 export default {
-    title: 'pages/NotificationItem',
+    title: 'entities/Notification/NotificationItem',
     component: NotificationItem,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -18,8 +18,20 @@ const Template: ComponentStory<typeof NotificationItem> = (args) => (
 );
 
 export const Light = Template.bind({});
-Light.args = {};
+Light.args = {
+    item: {
+        description: 'description',
+        id: '1',
+        title: 'title',
+    },
+};
 
 export const Dark = Template.bind({});
-Dark.args = {};
+Dark.args = {
+    item: {
+        description: 'description',
+        id: '1',
+        title: 'title',
+    },
+};
 Dark.decorators = [ThemeDecorator(Themes.DARK)];

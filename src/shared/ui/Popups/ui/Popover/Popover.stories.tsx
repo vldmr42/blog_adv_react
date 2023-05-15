@@ -6,7 +6,7 @@ import { Themes } from '@/app/providers/ThemeProvider';
 import { Popover } from './Popover';
 
 export default {
-    title: 'pages/Popover',
+    title: 'shared/Popups/Popover',
     component: Popover,
     argTypes: {
         backgroundColor: { control: 'color' },

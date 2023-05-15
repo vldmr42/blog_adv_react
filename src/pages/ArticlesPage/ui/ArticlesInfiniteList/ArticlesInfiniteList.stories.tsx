@@ -4,6 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Themes } from '@/app/providers/ThemeProvider';
 import { ArticlesInfiniteList } from './ArticlesInfiniteList';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
     title: 'pages/ArticlesPage/ArticlesInfiniteList',
@@ -21,7 +22,8 @@ const Template: ComponentStory<typeof ArticlesInfiniteList> = (args) => (
 
 export const Light = Template.bind({});
 Light.args = {};
+Light.decorators = [StoreDecorator({})];
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Themes.DARK)];
+Dark.decorators = [StoreDecorator({}), ThemeDecorator(Themes.DARK)];

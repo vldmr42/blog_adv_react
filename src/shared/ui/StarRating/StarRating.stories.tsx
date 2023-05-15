@@ -6,7 +6,7 @@ import { Themes } from '@/app/providers/ThemeProvider';
 import { StarRating } from './StarRating';
 
 export default {
-    title: 'pages/StarRating',
+    title: 'shared/StarRating',
     component: StarRating,
     argTypes: {
         backgroundColor: { control: 'color' },

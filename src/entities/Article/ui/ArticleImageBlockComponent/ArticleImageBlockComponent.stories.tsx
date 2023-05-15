@@ -4,6 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Themes } from '@/app/providers/ThemeProvider';
 import { ArticleImageBlockComponent } from './ArticleImageBlockComponent';
+import { ArticleBlockType } from '../../model/consts/consts';
 
 export default {
     title: 'entities/ArticleImageBlockComponent',
@@ -20,8 +21,22 @@ const Template: ComponentStory<typeof ArticleImageBlockComponent> = (args) => (
 );
 
 export const Light = Template.bind({});
-Light.args = {};
+Light.args = {
+    block: {
+        id: '1',
+        src: 'path',
+        title: 'title',
+        type: ArticleBlockType.IMAGE,
+    },
+};
 
 export const Dark = Template.bind({});
-Dark.args = {};
+Dark.args = {
+    block: {
+        id: '1',
+        src: 'path',
+        title: 'title',
+        type: ArticleBlockType.IMAGE,
+    },
+};
 Dark.decorators = [ThemeDecorator(Themes.DARK)];

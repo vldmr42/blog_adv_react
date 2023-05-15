@@ -4,6 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Themes } from '@/app/providers/ThemeProvider';
 import { ArticleTextBlockComponent } from './ArticleTextBlockComponent';
+import { ArticleBlockType } from '../../model/consts/consts';
 
 export default {
     title: 'entities/ArticleTextBlockComponent',
@@ -20,8 +21,22 @@ const Template: ComponentStory<typeof ArticleTextBlockComponent> = (args) => (
 );
 
 export const Light = Template.bind({});
-Light.args = {};
+Light.args = {
+    block: {
+        id: '1',
+        paragraphs: ['first', 'second'],
+        type: ArticleBlockType.TEXT,
+        title: 'title',
+    },
+};
 
 export const Dark = Template.bind({});
-Dark.args = {};
+Dark.args = {
+    block: {
+        id: '1',
+        paragraphs: ['first', 'second'],
+        type: ArticleBlockType.TEXT,
+        title: 'title',
+    },
+};
 Dark.decorators = [ThemeDecorator(Themes.DARK)];
