@@ -3,7 +3,7 @@ import { RouteProps } from 'react-router-dom';
 import { UserRole } from '@/entities/User';
 import { AboutPage } from '@/pages/AboutPage';
 import { AdminPanelPage } from '@/pages/AdminPanelPage';
-import ArticleEditPage from '@/pages/ArticleEditPage/ui/ArticleEditPage/ArticleEditPage';
+import { ArticleEditPage } from '@/pages/ArticleEditPage';
 import { ArticlesDetailsPage } from '@/pages/ArticlesDetailsPage';
 import { ArticlesPage } from '@/pages/ArticlesPage';
 import { ForbiddenPage } from '@/pages/ForbiddenPage';

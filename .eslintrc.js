@@ -75,8 +75,19 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
-        'vldmr-plugin/path-checker': ['error', { alias: '@' }],
         'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
+        'vldmr-plugin/path-checker': ['error', { alias: '@' }],
+        'vldmr-plugin/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.story.*',
+                    '**/StoreDecorator.tsx',
+                ],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,
@@ -89,6 +100,7 @@ module.exports = {
             rules: {
                 'i18next/no-literal-string': 'off',
                 'max-len': 'off',
+                // 'vldmr-plugin/public-api-imports': 'off',
             },
         },
     ],
