@@ -9,7 +9,7 @@ import {
     isUserManager,
     userActions,
 } from '@/entities/User';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Dropdown } from '@/shared/ui/Popups';
 
@@ -43,13 +43,13 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
                     ? [
                           {
                               content: t('Admin panel'),
-                              href: RoutePath.admin_panel,
+                              href: getRouteAdminPanel(),
                           },
                       ]
                     : []),
                 {
                     content: t('User profile'),
-                    href: RoutePath.profile + authData.id,
+                    href: getRouteProfile(authData.id),
                 },
                 {
                     content: t('Logout'),
