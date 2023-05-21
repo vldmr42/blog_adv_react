@@ -1,6 +1,6 @@
+import { articleDetailsReducer } from './articleDetailsSlice';
 import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById';
 import { ArticleDetailsSchema } from '../types/articleDetailsSchema';
-import { articleDetailsReducer } from './articleDetailsSlice';
 
 describe('profileSlice.test', () => {
     test('test fetchArticleById service pending', () => {

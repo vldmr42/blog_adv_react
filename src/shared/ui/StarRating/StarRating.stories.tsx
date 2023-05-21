@@ -1,9 +1,11 @@
 import React from 'react';
+
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { StarRating } from './StarRating';
 import { Themes } from '@/shared/const/theme';
+
+import { StarRating } from './StarRating';
 
 export default {
     title: 'shared/StarRating',

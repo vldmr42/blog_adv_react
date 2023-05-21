@@ -1,10 +1,12 @@
 import React from 'react';
+
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Themes } from '@/shared/const/theme';
+
 import { ArticleCodeBlockComponent } from './ArticleCodeBlockComponent';
 import { ArticleBlockType } from '../../model/consts/consts';
-import { Themes } from '@/shared/const/theme';
 
 const code = `<!DOCTYPE html>
 <html lang="en">

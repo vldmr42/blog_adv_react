@@ -1,12 +1,15 @@
 import React from 'react';
+
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Article } from '../../model/types/article';
-import { ArticleBlockType, ArticleType } from '../../model/consts/consts';
-import { ArticleDetails } from './ArticleDetails';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Themes } from '@/shared/const/theme';
+
+import { ArticleDetails } from './ArticleDetails';
+import { ArticleBlockType, ArticleType } from '../../model/consts/consts';
+import { Article } from '../../model/types/article';
+
 
 const article: Article = {
     id: '1',

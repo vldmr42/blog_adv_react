@@ -1,4 +1,5 @@
 import { Story } from '@storybook/react';
+
 // eslint-disable-next-line vldmr-plugin/layer-imports
 import { ThemeProvider } from '@/app/providers/ThemeProvider';
 // eslint-disable-next-line vldmr-plugin/layer-imports

@@ -1,10 +1,12 @@
 import React from 'react';
+
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Button } from '../../../Button/Button';
-import { Dropdown } from './Dropdown';
 import { Themes } from '@/shared/const/theme';
+
+import { Dropdown } from './Dropdown';
+import { Button } from '../../../Button/Button';
 
 export default {
     title: 'shared/Dropdown',

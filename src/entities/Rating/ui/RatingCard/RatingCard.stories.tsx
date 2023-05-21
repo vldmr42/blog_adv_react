@@ -1,9 +1,11 @@
 import React from 'react';
+
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { RatingCard } from './RatingCard';
 import { Themes } from '@/shared/const/theme';
+
+import { RatingCard } from './RatingCard';
 
 export default {
     title: 'entities/Rating/RatingCard',

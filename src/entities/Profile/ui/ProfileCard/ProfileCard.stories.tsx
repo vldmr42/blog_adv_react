@@ -3,9 +3,10 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 import avatar from '@/shared/assets/tests/avatar.jpg';
-import { ThemeDecorator } from '../../../../shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { ProfileCard } from './ProfileCard';
 import { Themes } from '@/shared/const/theme';
+
+import { ProfileCard } from './ProfileCard';
+import { ThemeDecorator } from '../../../../shared/config/storybook/ThemeDecorator/ThemeDecorator';
 
 export default {
     title: 'entities/ProfileCard',

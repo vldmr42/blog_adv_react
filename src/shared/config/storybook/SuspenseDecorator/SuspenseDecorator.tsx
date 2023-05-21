@@ -1,6 +1,6 @@
-import { Story } from '@storybook/react';
 import { Suspense } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+
+import { Story } from '@storybook/react';
 
 export const SuspenseDecorator = (StoryComponent: Story) => (
     <Suspense>

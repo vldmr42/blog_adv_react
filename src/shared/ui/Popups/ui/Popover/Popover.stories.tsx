@@ -1,9 +1,11 @@
 import React from 'react';
+
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Popover } from './Popover';
 import { Themes } from '@/shared/const/theme';
+
+import { Popover } from './Popover';
 
 export default {
     title: 'shared/Popups/Popover',

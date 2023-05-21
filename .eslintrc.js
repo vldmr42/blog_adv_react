@@ -25,12 +25,11 @@ module.exports = {
         'i18next',
         'react-hooks',
         'vldmr-plugin',
+        'unused-imports',
+        'import',
     ],
     rules: {
         'max-len': ['warn', { ignoreComments: true, code: 120 }],
-        // 'react/jsx-indent': [2, 4],
-        // 'react/jsx-indent-props': [2, 4],
-        // indent: [2, 4],
         'react/jsx-filename-extension': [
             2,
             { extensions: ['.js', '.jsx', '.tsx'] },
@@ -93,6 +92,31 @@ module.exports = {
             {
                 alias: '@',
                 ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
+        'unused-imports/no-unused-imports': 'error',
+        'import/order': [
+            'error',
+            {
+                groups: ['builtin', 'external', 'internal'],
+                pathGroups: [
+                    {
+                        pattern: 'react',
+                        group: 'external',
+                        position: 'before',
+                    },
+                    {
+                        pattern: '@/**',
+                        group: 'external',
+                        position: 'after',
+                    },
+                ],
+                pathGroupsExcludedImportTypes: ['react'],
+                'newlines-between': 'always',
+                alphabetize: {
+                    order: 'asc',
+                    caseInsensitive: true,
+                },
             },
         ],
     },

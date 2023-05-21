@@ -1,9 +1,11 @@
 import React from 'react';
+
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { ErrorPage } from './ErrorPage';
 import { Themes } from '@/shared/const/theme';
+
+import { ErrorPage } from './ErrorPage';
 
 export default {
     title: 'pages/ErrorPage',

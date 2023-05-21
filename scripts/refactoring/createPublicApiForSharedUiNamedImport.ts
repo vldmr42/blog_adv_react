@@ -1,5 +1,7 @@
 import path from 'path';
+
 import { Project } from 'ts-morph';
+
 import { PROJECT_LAYERS } from './consts';
 
 const project = new Project({});
