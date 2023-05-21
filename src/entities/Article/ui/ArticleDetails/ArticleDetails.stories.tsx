@@ -2,11 +2,11 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Themes } from '@/app/providers/ThemeProvider';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Article } from '../../model/types/article';
 import { ArticleBlockType, ArticleType } from '../../model/consts/consts';
 import { ArticleDetails } from './ArticleDetails';
+import { Themes } from '@/shared/const/theme';
 
 const article: Article = {
     id: '1',

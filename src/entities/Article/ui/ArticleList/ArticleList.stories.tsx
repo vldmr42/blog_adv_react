@@ -2,10 +2,10 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Themes } from '@/app/providers/ThemeProvider';
 import { Article } from '../../model/types/article';
 import { ArticleView } from '../../model/consts/consts';
 import { ArticleList } from './ArticleList';
+import { Themes } from '@/shared/const/theme';
 
 const article = {
     id: '1',

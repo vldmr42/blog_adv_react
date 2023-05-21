@@ -3,8 +3,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { action } from '@storybook/addon-actions';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Themes } from '@/app/providers/ThemeProvider';
 import { Tabs } from './Tabs';
+import { Themes } from '@/shared/const/theme';
 
 export default {
     title: 'shared/Tabs',

@@ -2,9 +2,9 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Themes } from '@/app/providers/ThemeProvider';
 import { ArticleImageBlockComponent } from './ArticleImageBlockComponent';
 import { ArticleBlockType } from '../../model/consts/consts';
+import { Themes } from '@/shared/const/theme';
 
 export default {
     title: 'entities/ArticleImageBlockComponent',
