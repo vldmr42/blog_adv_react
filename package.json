@@ -31,7 +31,7 @@
         "generate:slice": "node ./scripts/createSlice/index.js",
         "postinstall": "rm -rf ./node_modules/.cache"
     },
-    "lint-stage": {
+    "lint-staged": {
         "**/*.{ts,tsx}": "npm run eslint"
     },
     "keywords": [],
@@ -89,7 +89,7 @@
         "file-loader": "^6.2.0",
         "fork-ts-checker-webpack-plugin": "^7.2.13",
         "html-webpack-plugin": "^5.5.0",
-        "husky": "^7.0.0",
+        "husky": "^8.0.0",
         "identity-obj-proxy": "^3.0.0",
         "install": "^0.13.0",
         "jest": "^27.5.1",
