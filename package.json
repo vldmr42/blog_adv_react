@@ -32,7 +32,7 @@
         "postinstall": "rm -rf ./node_modules/.cache"
     },
     "lint-staged": {
-        "**/*.{ts,tsx}": "npm run eslint"
+        "**/*.{ts,tsx}": "eslint"
     },
     "keywords": [],
     "author": "",
