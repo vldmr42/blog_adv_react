@@ -71,6 +71,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
         'no-param-reassign': 'off',
         '@typescript-eslint/ban-ts-comment': 'warn',
+        '@typescript-eslint/no-namespace': 'off',
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
