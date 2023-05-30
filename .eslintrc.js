@@ -135,5 +135,11 @@ module.exports = {
                 // 'vldmr-plugin/public-api-imports': 'off',
             },
         },
+        {
+            files: ['**/cypress/**'],
+            rules: {
+                'vldmr-plugin/path-checker': 'off',
+            },
+        },
     ],
 };
