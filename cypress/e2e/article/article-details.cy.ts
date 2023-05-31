@@ -25,7 +25,10 @@ describe('Article-details test', () => {
         cy.getByTestId('CommentCard.Content').should('have.length', 1);
     });
 
-    it('Rate an article', () => {
+    it('Rate an article (fixture example)', () => {
+        cy.intercept('GET', '**/articles/**', {
+            fixture: 'article-details.json',
+        });
         cy.getByTestId('ArticleDetails.Info');
         cy.getByTestId('RatingCard').scrollIntoView();
         cy.setRate(4, 'feedback');
