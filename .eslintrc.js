@@ -76,6 +76,7 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
         'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
+        'react/no-unstable-nested-components': 'warn',
         'vldmr-plugin/path-checker': ['error', { alias: '@' }],
         'vldmr-plugin/public-api-imports': [
             'error',
