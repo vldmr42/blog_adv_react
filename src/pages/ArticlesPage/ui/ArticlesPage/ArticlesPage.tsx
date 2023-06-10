@@ -1,5 +1,6 @@
 import { memo, useCallback } from 'react';
 
+import { ArticlePageGreeting } from '@/features/articlePageGreeting';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader,
@@ -38,6 +39,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
             >
                 <ArticlesPageFilter />
                 <ArticlesInfiniteList className={cls.list} />
+                <ArticlePageGreeting />
             </Page>
         </DynamicModuleLoader>
     );
