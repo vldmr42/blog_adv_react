@@ -1,4 +1,5 @@
 export interface FeatureFlags {
-    isArticleRatingEnabled?: true;
-    isCounterEnabled?: true;
+    isArticleRatingEnabled?: boolean;
+    isCounterEnabled?: boolean;
+    isAppRedesigned?: boolean;
 }
