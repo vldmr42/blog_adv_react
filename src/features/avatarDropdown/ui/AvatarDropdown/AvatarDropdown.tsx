@@ -48,7 +48,11 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
               ]
             : []),
         {
-            content: t('User profile'),
+            content: t('Profile'),
+            href: getRouteProfile(authData.id),
+        },
+        {
+            content: t('Settings'),
             href: getRouteProfile(authData.id),
         },
         {
