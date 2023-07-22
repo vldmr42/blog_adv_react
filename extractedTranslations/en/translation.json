@@ -101,5 +101,7 @@
   "toggle": "",
   "unexpected-error-occured": "unexpected-error-occured",
   "views": "",
+  "{{count}} views": "",
+  "{{count}} views_plural": "",
   "Статьи не найдены": ""
 }

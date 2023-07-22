@@ -62,5 +62,9 @@
     "descending": "нисходящий",
     "short-lang": "RU",
     "lang": "Русский",
-    "Profile": "Профиль"
+    "Profile": "Профиль",
+    "{{count}} views_zero": "{{count}} просмотров",
+    "{{count}} views_one": "{{count}} просмотр",
+    "{{count}} views_few": "{{count}} просмотра",
+    "{{count}} views_many": "{{count}} просмотров"
 }
