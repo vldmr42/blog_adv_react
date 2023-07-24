@@ -23,11 +23,14 @@ import { ArticleListItemProps } from '../ArticleListItem';
 export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
     const { className, article, view, target } = props;
     const { t } = useTranslation();
-    const types = <Text text={article.type.join(', ')} className={cls.types} />;
 
     const userInfo = (
         <>
-            <Avatar size={32} src={article.user.avatar} />
+            <Avatar
+                className={cls.avatar}
+                size={32}
+                src={article.user.avatar}
+            />
             <Text bold text={article.user.username} />
         </>
     );
@@ -95,9 +98,9 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                 cls[view],
             ])}
         >
-            <Card className={cls.card} border="borderRound">
+            <Card padding="0" className={cls.card} border="borderRound">
                 <AppImage
-                    fallback={<Skeleton width={200} height={200} />}
+                    fallback={<Skeleton width="100%" height={200} />}
                     alt={article.title}
                     src={article.img}
                     className={cls.img}
