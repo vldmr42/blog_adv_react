@@ -11,9 +11,9 @@ import { NotificationButton } from '@/features/notificationButton';
 import { getRouteArticleCreate } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ToggleFeatures } from '@/shared/lib/features';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
 import { AppLink } from '@/shared/ui/redesigned/AppLink';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { HStack } from '@/shared/ui/redesigned/Stack';
 
 import cls from './Navbar.module.scss';
@@ -75,12 +75,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     }
 
     return (
-        <header className={classNames(cls.Navbar, {}, [className])}>
-            <Button
-                theme={ButtonTheme.CLEAR_INVERTED}
-                className={cls.links}
-                onClick={onShowModal}
-            >
+        <header className={classNames(cls.NavbarRedesigned, {}, [className])}>
+            <Button variant="clear" className={cls.links} onClick={onShowModal}>
                 {t('Login')}
             </Button>
             {isAuthModal && (
