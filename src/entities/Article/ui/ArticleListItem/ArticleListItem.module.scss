@@ -20,7 +20,7 @@
         margin-top: 8px;
     }
 
-    .image {
+    .img {
         width: 100%;
         max-height: 250px;
         object-fit: cover;
@@ -34,7 +34,7 @@
     }
 
     .textBlock {
-        max-height: 180px;
+        max-height: 200px;
         overflow-y: hidden;
     }
 }
@@ -66,16 +66,16 @@
         position: relative;
     }
 
-    .image {
+    .img {
         width: 200px;
         height: 200px;
         object-fit: cover;
     }
 
     .infoWrapper {
-        margin-top: 8px;
         display: flex;
         align-items: center;
+        margin-top: 8px;
     }
 
     .types p {
@@ -108,7 +108,9 @@
     }
 
     &.SMALL {
-        width: 240px;
-        height: 350px;
+        .card {
+            height: 350px;
+            width: 240px;
+        }
     }
 }
