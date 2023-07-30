@@ -20,23 +20,9 @@ import {
     getRouteForbidden,
     getRouteProfile,
     getRouteSettings,
+    AppRoutes,
 } from '@/shared/const/router';
 import { AppRouteProps } from '@/shared/types/router';
-
-enum AppRoutes {
-    MAIN = 'main',
-    SETTINGS = 'settings',
-    ABOUT = 'about',
-    PROFILE = 'profile',
-    ARTICLES = 'articles',
-    ARTICLES_DETAILS = 'articles_details',
-    ARTICLES_CREATE = 'articles_create',
-    ARTICLES_EDIT = 'articles_edit',
-    ADMIN_PANEL = 'admin_panel',
-    FORBIDDEN = 'forbidden',
-    // last
-    NOT_FOUND = 'not_found',
-}
 
 export const routeConfig: Record<AppRoutes, AppRouteProps> = {
     [AppRoutes.MAIN]: {

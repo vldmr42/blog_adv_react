@@ -13,6 +13,7 @@ import { Navbar } from '@/widgets/Navbar';
 import { PageLoader } from '@/widgets/PageLoader';
 import { Sidebar } from '@/widgets/Sidebar';
 
+import { useAppToolbar } from './lib/useAppToolbar';
 import { AppRouter } from './providers/router';
 
 import './styles/index.scss';
@@ -21,6 +22,7 @@ const App = () => {
     const { theme } = useTheme();
     const dispatch = useAppDispatch();
     const inited = useSelector(getUserInited);
+    const toolbar = useAppToolbar();
 
     useEffect(() => {
         if (!inited) {
@@ -58,7 +60,7 @@ const App = () => {
                             content={<AppRouter />}
                             sidebar={<Sidebar />}
                             header={<Navbar />}
-                            toolbar={<div />}
+                            toolbar={toolbar}
                         />
                     </Suspense>
                 </div>
