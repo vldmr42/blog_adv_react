@@ -10,7 +10,6 @@ import { ArticleDetails } from './ArticleDetails';
 import { ArticleBlockType, ArticleType } from '../../model/consts/consts';
 import { Article } from '../../model/types/article';
 
-
 const article: Article = {
     id: '1',
     title: 'Javascript news',

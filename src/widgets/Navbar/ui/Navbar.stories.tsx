@@ -8,7 +8,6 @@ import { Themes } from '@/shared/const/theme';
 
 import { Navbar } from './Navbar';
 
-
 export default {
     title: 'widget/Navbar',
     component: Navbar,

@@ -14,9 +14,6 @@ import {
     getRouteProfile,
     getRouteSettings,
 } from '@/shared/const/router';
-import { ToggleFeatures } from '@/shared/lib/features';
-import { Avatar as AvatarDeprecated } from '@/shared/ui/deprecated/Avatar';
-import { Dropdown as DrpdownDeprecated } from '@/shared/ui/deprecated/Popups';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
 import { Dropdown } from '@/shared/ui/redesigned/Popups';
 
@@ -66,30 +63,11 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
     ];
 
     return (
-        <ToggleFeatures
-            feature="isAppRedesigned"
-            on={
-                <Dropdown
-                    className={className}
-                    items={items}
-                    trigger={<Avatar size={48} src={authData.avatar} />}
-                    direction="bottom left"
-                />
-            }
-            off={
-                <DrpdownDeprecated
-                    className={className}
-                    items={items}
-                    trigger={
-                        <AvatarDeprecated
-                            fallbackInverted
-                            size={30}
-                            src={authData.avatar}
-                        />
-                    }
-                    direction="bottom left"
-                />
-            }
+        <Dropdown
+            className={className}
+            items={items}
+            trigger={<Avatar size={48} src={authData.avatar} />}
+            direction="bottom left"
         />
     );
 });

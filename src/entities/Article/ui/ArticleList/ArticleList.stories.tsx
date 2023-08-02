@@ -9,7 +9,6 @@ import { ArticleList } from './ArticleList';
 import { ArticleView } from '../../model/consts/consts';
 import { Article } from '../../model/types/article';
 
-
 const article = {
     id: '1',
     title: 'Javascript news',

@@ -9,7 +9,6 @@ import { Themes } from '@/shared/const/theme';
 
 import ArticlesDetailsPage from './ArticlesDetailsPage';
 
-
 const article: Article = {
     id: '1',
     title: 'Javascript news',

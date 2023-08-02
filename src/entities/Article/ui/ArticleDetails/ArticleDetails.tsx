@@ -11,11 +11,9 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { toggleFeatures, ToggleFeatures } from '@/shared/lib/features';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Avatar as AvatarDeprecated } from '@/shared/ui/deprecated/Avatar';
 import { Icon as IconDeprecated } from '@/shared/ui/deprecated/Icon';
-import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
 import { Text as TextDeprecated, TextSize } from '@/shared/ui/deprecated/Text';
 import { AppImage } from '@/shared/ui/redesigned/AppImage';
 import { Skeleton as SkeletonRedesigned } from '@/shared/ui/redesigned/Skeleton';
@@ -42,11 +40,7 @@ const reducers: ReducersList = {
 };
 
 const ArticleDetailsSkeleton = () => {
-    const Skeleton = toggleFeatures({
-        name: 'isAppRedesigned',
-        on: () => SkeletonRedesigned,
-        off: () => SkeletonDeprecated,
-    });
+    const Skeleton = SkeletonRedesigned;
 
     return (
         <VStack gap="16" max>
@@ -146,13 +140,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
             />
         );
     } else {
-        content = (
-            <ToggleFeatures
-                feature="isAppRedesigned"
-                on={<Redesigned />}
-                off={<Deprecated />}
-            />
-        );
+        content = <Redesigned />;
     }
 
     return (

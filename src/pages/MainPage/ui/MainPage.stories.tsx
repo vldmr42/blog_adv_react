@@ -8,7 +8,6 @@ import { Themes } from '@/shared/const/theme';
 
 import MainPage from './MainPage';
 
-
 export default {
     title: 'pages/MainPage',
     component: MainPage,

@@ -8,7 +8,6 @@ import { Themes } from '@/shared/const/theme';
 
 import { Sidebar } from './Sidebar';
 
-
 export default {
     title: 'widget/Sidebar',
     component: Sidebar,

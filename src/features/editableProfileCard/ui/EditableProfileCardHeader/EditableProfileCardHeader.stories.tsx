@@ -8,7 +8,6 @@ import { Themes } from '@/shared/const/theme';
 
 import { EditableProfileCardHeader } from './EditableProfileCardHeader';
 
-
 export default {
     title: 'features/editableProfileCard/EditableProfileCardHeader',
     component: EditableProfileCardHeader,

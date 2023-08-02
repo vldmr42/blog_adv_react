@@ -8,13 +8,7 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { ToggleFeatures } from '@/shared/lib/features';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import {
-    Button as ButtonDeprecated,
-    ButtonTheme,
-} from '@/shared/ui/deprecated/Button';
-import { Input as InputDeprecated } from '@/shared/ui/deprecated/Input';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { Card } from '@/shared/ui/redesigned/Card';
 import { Input } from '@/shared/ui/redesigned/Input';
@@ -60,64 +54,32 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <ToggleFeatures
-                feature="isAppRedesigned"
-                on={
-                    <Card padding="24" border="borderRound" max>
-                        <HStack
-                            gap="16"
-                            data-testid="AddCommentForm"
-                            justify="between"
-                            max
-                            className={classNames(
-                                cls.AddCommentFormRedesigned,
-                                {},
-                                [className],
-                            )}
-                        >
-                            <Input
-                                data-testid="AddCommentForm.Input"
-                                className={cls.input}
-                                placeholder={t('Add comment')}
-                                value={text}
-                                onChange={onCommentTextChange}
-                            />
-                            <Button
-                                data-testid="AddCommentForm.Button"
-                                variant="outline"
-                                onClick={onSendHandler}
-                            >
-                                {t('Add')}
-                            </Button>
-                        </HStack>
-                    </Card>
-                }
-                off={
-                    <HStack
-                        data-testid="AddCommentForm"
-                        justify="between"
-                        max
-                        className={classNames(cls.AddCommentForm, {}, [
-                            className,
-                        ])}
+            <Card padding="24" border="borderRound" max>
+                <HStack
+                    gap="16"
+                    data-testid="AddCommentForm"
+                    justify="between"
+                    max
+                    className={classNames(cls.AddCommentFormRedesigned, {}, [
+                        className,
+                    ])}
+                >
+                    <Input
+                        data-testid="AddCommentForm.Input"
+                        className={cls.input}
+                        placeholder={t('Add comment')}
+                        value={text}
+                        onChange={onCommentTextChange}
+                    />
+                    <Button
+                        data-testid="AddCommentForm.Button"
+                        variant="outline"
+                        onClick={onSendHandler}
                     >
-                        <InputDeprecated
-                            data-testid="AddCommentForm.Input"
-                            className={cls.input}
-                            placeholder={t('Add comment')}
-                            value={text}
-                            onChange={onCommentTextChange}
-                        />
-                        <ButtonDeprecated
-                            data-testid="AddCommentForm.Button"
-                            theme={ButtonTheme.OUTLINE}
-                            onClick={onSendHandler}
-                        >
-                            {t('Add')}
-                        </ButtonDeprecated>
-                    </HStack>
-                }
-            />
+                        {t('Add')}
+                    </Button>
+                </HStack>
+            </Card>
         </DynamicModuleLoader>
     );
 });

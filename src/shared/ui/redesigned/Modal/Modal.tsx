@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
-import { toggleFeatures } from '@/shared/lib/features';
 import { useModal } from '@/shared/lib/hooks/useModal/useModal';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 
@@ -43,11 +42,7 @@ export const Modal = (props: ModalProps) => {
                     className,
                     theme,
                     'app_modal',
-                    toggleFeatures({
-                        name: 'isAppRedesigned',
-                        on: () => cls.modalNew,
-                        off: () => cls.modalOld,
-                    }),
+                    cls.modalNew,
                 ])}
             >
                 <Overlay onClick={close} />

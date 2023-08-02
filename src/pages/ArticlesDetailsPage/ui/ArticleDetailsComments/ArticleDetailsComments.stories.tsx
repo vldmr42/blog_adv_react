@@ -8,7 +8,6 @@ import { Themes } from '@/shared/const/theme';
 
 import { ArticleDetailsComments } from './ArticleDetailsComments';
 
-
 export default {
     title: 'pages/ArticlesDetailsPage/ArticleDetailsComments',
     component: ArticleDetailsComments,

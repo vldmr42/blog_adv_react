@@ -9,7 +9,6 @@ import { Themes } from '@/shared/const/theme';
 
 import AddCommentForm from './AddCommentForm';
 
-
 export default {
     title: 'features/AddCommentForm',
     component: AddCommentForm,

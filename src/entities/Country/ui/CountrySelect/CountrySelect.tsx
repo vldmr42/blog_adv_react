@@ -2,8 +2,6 @@ import { useCallback, memo } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { ToggleFeatures } from '@/shared/lib/features';
-import { ListBox as ListBoxDeprecated } from '@/shared/ui/deprecated/Popups';
 import { ListBox } from '@/shared/ui/redesigned/Popups';
 
 import { Country } from '../../model/types/country';
@@ -44,12 +42,6 @@ export const CountrySelect = memo(
             className,
         };
 
-        return (
-            <ToggleFeatures
-                feature="isAppRedesigned"
-                on={<ListBox {...props} />}
-                off={<ListBoxDeprecated {...props} />}
-            />
-        );
+        return <ListBox {...props} />;
     },
 );

@@ -9,7 +9,6 @@ import { ArticleListItem } from './ArticleListItem';
 import { ArticleView } from '../../model/consts/consts';
 import { Article } from '../../model/types/article';
 
-
 export default {
     title: 'entities/Article/ArticleListItem',
     component: ArticleListItem,

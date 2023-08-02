@@ -1,9 +1,6 @@
 import { memo } from 'react';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { ToggleFeatures, toggleFeatures } from '@/shared/lib/features';
-import { Card as CardDeprecated } from '@/shared/ui/deprecated/Card';
-import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
 import { Card as CardRedesigned } from '@/shared/ui/redesigned/Card';
 import { Skeleton as SkeletonRedesigned } from '@/shared/ui/redesigned/Skeleton';
 
@@ -19,17 +16,9 @@ export const ArticleListItemSkeleton = memo(
     (props: ArticleListItemSkeletonProps) => {
         const { className, view } = props;
 
-        const mainClass = toggleFeatures({
-            name: 'isAppRedesigned',
-            on: () => cls.ArticleListItemRedesigned,
-            off: () => cls.ArticleListItem,
-        });
+        const mainClass = cls.ArticleListItemRedesigned;
 
-        const Skeleton = toggleFeatures({
-            name: 'isAppRedesigned',
-            on: () => SkeletonRedesigned,
-            off: () => SkeletonDeprecated,
-        });
+        const Skeleton = SkeletonRedesigned;
 
         if (view === ArticleView.BIG) {
             const cardContent = (
@@ -61,47 +50,20 @@ export const ArticleListItemSkeleton = memo(
                         cls[view],
                     ])}
                 >
-                    <ToggleFeatures
-                        feature="isAppRedesigned"
-                        on={
-                            <CardRedesigned
-                                border="borderRound"
-                                className={cls.card}
-                            >
-                                {cardContent}
-                            </CardRedesigned>
-                        }
-                        off={
-                            <CardDeprecated className={cls.card}>
-                                {cardContent}
-                            </CardDeprecated>
-                        }
-                    />
+                    <CardRedesigned border="borderRound" className={cls.card}>
+                        {cardContent}
+                    </CardRedesigned>
                 </div>
             );
         }
 
         const cardContent = (
             <>
-                <ToggleFeatures
-                    feature="isAppRedesigned"
-                    on={
-                        <Skeleton
-                            width="100%"
-                            height={150}
-                            border="32px"
-                            className={cls.img}
-                        />
-                    }
-                    off={
-                        <div className={cls.imageWrapper}>
-                            <Skeleton
-                                width={200}
-                                height={200}
-                                className={cls.img}
-                            />
-                        </div>
-                    }
+                <Skeleton
+                    width="100%"
+                    height={150}
+                    border="32px"
+                    className={cls.img}
                 />
                 <div className={cls.infoWrapper}>
                     <Skeleton width={130} height={16} />
@@ -112,22 +74,9 @@ export const ArticleListItemSkeleton = memo(
 
         return (
             <div className={classNames(mainClass, {}, [className, cls[view]])}>
-                <ToggleFeatures
-                    feature="isAppRedesigned"
-                    on={
-                        <CardRedesigned
-                            border="borderRound"
-                            className={cls.card}
-                        >
-                            {cardContent}
-                        </CardRedesigned>
-                    }
-                    off={
-                        <CardDeprecated className={cls.card}>
-                            {cardContent}
-                        </CardDeprecated>
-                    }
-                />
+                <CardRedesigned border="borderRound" className={cls.card}>
+                    {cardContent}
+                </CardRedesigned>
             </div>
         );
     },
