@@ -2,8 +2,7 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Themes } from '@/shared/const/theme';
+import { FeatureFlagsDecorator } from '@/shared/config/storybook/FeatureFlagsDecorator/FeatureFlagsDecorator';
 
 import { CommentCard } from './CommentCard';
 
@@ -19,8 +18,7 @@ const Template: ComponentStory<typeof CommentCard> = (args) => (
     <CommentCard {...(args as typeof CommentCard.arguments)} />
 );
 
-export const Light = Template.bind({});
-Light.args = {
+const compArgs = {
     comment: {
         id: '1',
         text: 'Comment text',
@@ -32,16 +30,11 @@ Light.args = {
     isLoading: false,
 };
 
-export const Dark = Template.bind({});
-Dark.args = {
-    comment: {
-        id: '1',
-        text: 'Comment text',
-        user: {
-            id: '1',
-            username: 'name',
-        },
-    },
-    isLoading: false,
-};
-Dark.decorators = [ThemeDecorator(Themes.DARK)];
+export const Normal = Template.bind({});
+Normal.args = compArgs;
+
+export const NormalRedesigned = Template.bind({});
+NormalRedesigned.args = compArgs;
+NormalRedesigned.decorators = [
+    FeatureFlagsDecorator({ isAppRedesigned: true }),
+];
